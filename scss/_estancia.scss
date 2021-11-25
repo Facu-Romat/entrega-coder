@@ -1,0 +1,99 @@
+/* ---ESTANCIA.HTML--- */
+
+.casco {
+    margin-top: 6em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+
+    background-color: #f1f0f0;
+    box-shadow: 2px 2px 5px grey;
+
+    width: 65%;
+
+    display: grid;
+    grid-template-columns: 35% 65%;
+
+    .casco__img {
+        width: 80%;
+    }
+    
+}
+
+.churrasquera{
+    margin-top: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+
+    background-color: #f1f0f0;
+    box-shadow: 2px 2px 5px grey;
+
+    width: 65%;
+
+    display: grid;
+    grid-template-columns: 65% 35%;
+    gap: 3em;
+
+    .churrasquera__img {
+        width: 80%;
+    }
+}
+
+.parque{
+    margin-top: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+
+    background-color: #f1f0f0;
+    box-shadow: 2px 2px 5px grey;
+
+    width: 65%;
+
+    display: grid;
+    grid-template-columns: 35% 65%;
+
+    .parque__img {
+        width: 80%;
+    }
+}
+
+.cava{
+    margin-top: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+
+    background-color: #f1f0f0;
+    box-shadow: 2px 2px 5px grey;
+
+    width: 65%;
+
+    display: grid;
+    grid-template-columns: 65% 35%;
+    gap: 3em;
+
+    .cava__img {
+        width: 80%;
+    }
+}   
+
+@media (max-width: 40em) {
+    .casco {
+        display: block;
+    }
+    .churrasquera {
+        display: block;
+    }
+    .parque {
+        display: block;
+    }
+    .cava {
+        display: block;
+    }
+}
+
+
+
+/* ---FIN ESTANCIA.HTML--- */

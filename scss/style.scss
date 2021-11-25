@@ -1,0 +1,40 @@
+/* --- ATRIBUTOS QUE APLICAN A TODA LA WEB --- */
+* {
+    margin: 0%;
+    padding: 0%;
+
+    list-style-type: none;
+    text-decoration: none;
+
+}
+/* ---FIN DE ATRIBUTOS QUE APLICAN A TODA LA WEB --- */
+
+@import "fuentes";
+@import "header";
+@import "footer";
+@import "variables-mixins-extends";
+
+@import "index";
+@import "estancia";
+@import "servicios";
+@import "hotel";
+@import "galeria";
+
+
+
+
+// TODO: agarrar una de estas particiones y anidar el contendido 
+
+// TODO: agregar mapa de sitio, en footer
+
+// TODO: comprimir mas imagenes
+
+// TODO: agregar alts
+
+// TODO: agregar meta keywords
+
+// TODO: agregar 404
+
+// TODO: ponerle titulos y descriptions a todos los htmils
+
+// TODO: Pasar la web por w3 validator

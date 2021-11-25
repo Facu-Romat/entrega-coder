@@ -1,0 +1,29 @@
+/* FOOTER */
+.footer {
+    margin-top: 2.5em;
+    background-color: #fce7e9;
+
+    .footer__list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    
+        list-style: none;
+
+        .footer__img {
+            max-width: 10em;
+        }
+        
+        .footer__fb {
+            max-width: 3em;
+            fill: #372442;
+        }
+        
+        .footer__ig {
+            max-width: 3em;
+            fill: #372442;
+        }
+    }  
+}
+
+/* FIN FOOTER */

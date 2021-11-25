@@ -1,0 +1,50 @@
+/* TODO: hacer partial con variables que se repitan bastante, como $borders:"-". No te olvides de importar cada uno de estas variables en las particiones */
+
+/* TODO: hacer partial con _extends.css para agrupar variables que se repiten mucho, tipo %border {} o %flexbox () . Luego solo tenes que poner @extend %border y listo */
+
+
+// Algunos @extends de variables que se repiten mucho
+
+// %linea-violeta {
+//     background-color: #372442;
+//     height: 1.5vh;
+//     margin-top: 2.5em;
+// }
+
+// %box-rosa {
+//     background-color: #fce7e9;
+//     box-shadow: 2px 2px 5px grey;
+// }
+
+// %box-gris {
+//     background-color: #f1f0f0;
+//     box-shadow: 2px 2px 5px grey;
+// }
+
+
+// Un @mixin con algunos parametros que se usan mucho, peor que toaia no decidi que valores ponerle
+
+// @mixin flex ($width, $height, $display, $align) {
+//     width: $width;
+//     height: $height;
+//     display: $display;
+//     justify-content: $align;
+// }
+
+// .section {
+//     @include flex(100%, 100vh, flex, center)
+// }
+
+// Mixin del formato de cajas y de flexbox, que los uso bastante
+
+// @mixin box-model ($margin-top, $margin-left, $margin-right, $padding, $width) {
+//     margin-top: $margin-top;
+//     margin-left: $margin-left;
+//     margin-right: $margin-right;
+//     padding: $width;
+//     width: $padding;
+// }
+
+// @mixin flex-box ($display, $justify-content, $align-items) {
+    
+// }
