@@ -89,9 +89,12 @@ a, ul, li {
 /* LANDING */
 .landing {
   margin-top: 4em;
-}
-.landing .landing-img {
-  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imagenes/index/index-portada.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 /* NOSOTROS */
@@ -158,6 +161,12 @@ a, ul, li {
   margin-right: auto;
   margin-bottom: 1em;
 }
+.nosotros-seccion2-contenedor .nosotros-seccion2-box2 .nosotros-seccion2-h3 {
+  text-align: center;
+}
+.nosotros-seccion2-contenedor .nosotros-seccion2-box2 .nosotros-seccion2-p {
+  text-align: center;
+}
 .nosotros-seccion2-contenedor .nosotros-seccion2-box3 {
   background-color: #f1f0f0;
   box-shadow: 2px 2px 5px grey;
@@ -172,6 +181,12 @@ a, ul, li {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1em;
+}
+.nosotros-seccion2-contenedor .nosotros-seccion2-box3 .nosotros-seccion2-h3 {
+  text-align: center;
+}
+.nosotros-seccion2-contenedor .nosotros-seccion2-box3 .nosotros-seccion2-p {
+  text-align: center;
 }
 
 @media (max-width: 40em) {
@@ -369,6 +384,9 @@ a, ul, li {
   width: 65%;
   background-color: #f1f0f0;
   box-shadow: 2px 2px 5px grey;
+}
+.seccion__servicios ul div img {
+  width: 33%;
 }
 
 /* ---FIN SERVICIOS.HTML--- */
