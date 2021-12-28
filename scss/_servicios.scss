@@ -11,13 +11,48 @@
     box-shadow: 2px 2px 5px grey;
 
     ul {
-        div
-        {
+        
+        li {
+            list-style-type: circle;
+        }
+
+        div {
+            display: flex;
+
             img {
+                padding: 0.5em;
                 width: 33%;
             }
         }
     }
+}
+
+@media (max-width: 75em) {
+    .seccion__servicios {
+        width: 80%;
+    }
+
+}
+
+@media (max-width: 40em) {
+    .seccion__servicios {
+        width: 90%;
+
+        ul {
+    
+            div {
+                display: block;
+    
+                img {
+                     width: 90%;
+                }
+                }
+            
+        }
+    }
+
+    
+
 }
 
 

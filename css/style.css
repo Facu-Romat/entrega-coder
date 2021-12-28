@@ -12,11 +12,16 @@
 /*  FUENTES  */
 h1 {
   color: #ffffff;
-  font-size: 3em;
+  font-size: 4em;
   font-family: "Cardo", serif;
   text-shadow: 2px 2px 5px black;
 }
 
+@media (max-width: 40em) {
+  h1 {
+    font-size: 1.8em;
+  }
+}
 h2 {
   color: #372442;
   font-size: 1.8em;
@@ -40,6 +45,7 @@ a, ul, li {
   color: #333333;
   font-size: 1em;
   font-family: "Lato", sans-serif;
+  line-height: 200%;
 }
 
 /*  FIN DE FUENTES  */
@@ -82,6 +88,21 @@ a, ul, li {
   fill: #372442;
 }
 
+@media (max-width: 60em) {
+  .footer__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer__list .footer__fb {
+    margin: 0.5em;
+  }
+  .footer__list .footer__ig {
+    margin: 0.5em;
+  }
+}
 /* FIN FOOTER */
 /* TODO: hacer partial con variables que se repitan bastante, como $borders:"-". No te olvides de importar cada uno de estas variables en las particiones */
 /* TODO: hacer partial con _extends.css para agrupar variables que se repiten mucho, tipo %border {} o %flexbox () . Luego solo tenes que poner @extend %border y listo */
@@ -90,11 +111,18 @@ a, ul, li {
 .landing {
   margin-top: 4em;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imagenes/index/index-portada.jpg");
-  height: 100%;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
-  position: relative;
+}
+
+div h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 300px 10px;
 }
 
 /* NOSOTROS */
@@ -119,6 +147,7 @@ a, ul, li {
 }
 .nosotros-seccion1-contenedor .nosotros-seccion1-img {
   max-width: 30em;
+  height: auto;
 }
 
 .nosotros-seccion2-contenedor {
@@ -189,49 +218,71 @@ a, ul, li {
   text-align: center;
 }
 
-@media (max-width: 40em) {
+@media (max-width: 80em) {
   .nosotros-seccion1-contenedor {
-    display: block;
     margin: 1em;
+    width: 90%;
   }
 
-  .nosotros-seccion1-img {
+  .nosotros-seccion2-contenedor .nosotros-seccion2-box1 {
+    width: 25%;
+    margin: 0.5em;
+  }
+  .nosotros-seccion2-contenedor .nosotros-seccion2-box2 {
+    width: 25%;
+    margin: 0.5em;
+  }
+  .nosotros-seccion2-contenedor .nosotros-seccion2-box3 {
+    width: 25%;
+    margin: 0.5em;
+  }
+}
+@media (max-width: 60em) {
+  .nosotros-seccion1-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1em;
+    width: 90%;
+  }
+  .nosotros-seccion1-contenedor .nosotros-seccion1-box {
+    margin-right: 0em;
+  }
+  .nosotros-seccion1-contenedor .nosotros-seccion1-img {
     width: 100%;
     margin-top: 1em;
   }
 }
-@media (max-width: 80em) {
-  .nosotros-seccion2-box1 {
-    width: 25%;
-    margin: 1em;
-  }
-
-  .nosotros-seccion2-box2 {
-    width: 25%;
-    margin: 1em;
-  }
-
-  .nosotros-seccion2-box3 {
-    width: 25%;
-    margin: 1em;
-  }
-}
 @media (max-width: 40em) {
+  .nosotros-seccion1-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1em;
+    width: 90%;
+  }
+  .nosotros-seccion1-contenedor .nosotros-seccion1-box {
+    margin-right: 0em;
+  }
+  .nosotros-seccion1-contenedor .nosotros-seccion1-img {
+    width: 100%;
+    margin-top: 1em;
+  }
+
   .nosotros-seccion2-contenedor {
     display: block;
   }
-
-  .nosotros-seccion2-box1 {
+  .nosotros-seccion2-contenedor .nosotros-seccion2-box1 {
     width: 90%;
     margin: 1em;
   }
-
-  .nosotros-seccion2-box2 {
+  .nosotros-seccion2-contenedor .nosotros-seccion2-box2 {
     width: 90%;
     margin: 1em;
   }
-
-  .nosotros-seccion2-box3 {
+  .nosotros-seccion2-contenedor .nosotros-seccion2-box3 {
     width: 90%;
     margin: 1em;
   }
@@ -280,17 +331,36 @@ a, ul, li {
   background-color: #ffadb5;
 }
 
+@media (max-width: 75em) {
+  .contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .contacto .contacto-mapa {
+    width: 80%;
+    margin-top: 1em;
+  }
+  .contacto .contacto-box {
+    width: 80%;
+    margin-top: 1em;
+  }
+}
 @media (max-width: 40em) {
   .contacto {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
-
-  .contacto-mapa {
-    width: 100%;
+  .contacto .contacto-mapa {
+    width: 90%;
+    margin-top: 1em;
   }
-
-  .contacto-box {
-    width: 100%;
+  .contacto .contacto-box {
+    width: 90%;
+    margin-top: 1em;
   }
 }
 /* ---FIN INDEX.HTML--- */
@@ -304,7 +374,7 @@ a, ul, li {
   box-shadow: 2px 2px 5px grey;
   width: 65%;
   display: grid;
-  grid-template-columns: 35% 65%;
+  grid-template-columns: 30% 70%;
 }
 .casco .casco__img {
   width: 80%;
@@ -319,7 +389,7 @@ a, ul, li {
   box-shadow: 2px 2px 5px grey;
   width: 65%;
   display: grid;
-  grid-template-columns: 65% 35%;
+  grid-template-columns: 70% 30%;
   gap: 3em;
 }
 .churrasquera .churrasquera__img {
@@ -335,7 +405,7 @@ a, ul, li {
   box-shadow: 2px 2px 5px grey;
   width: 65%;
   display: grid;
-  grid-template-columns: 35% 65%;
+  grid-template-columns: 30% 70%;
 }
 .parque .parque__img {
   width: 80%;
@@ -350,28 +420,93 @@ a, ul, li {
   box-shadow: 2px 2px 5px grey;
   width: 65%;
   display: grid;
-  grid-template-columns: 65% 35%;
+  grid-template-columns: 70% 30%;
   gap: 3em;
 }
 .cava .cava__img {
   width: 80%;
 }
 
+@media (max-width: 75em) {
+  .casco {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 1em;
+  }
+  .casco .casco__img {
+    width: 100%;
+  }
+
+  .churrasquera {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    gap: 1em;
+  }
+  .churrasquera .churrasquera__img {
+    width: 100%;
+    padding-right: 1em;
+  }
+
+  .parque {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 1em;
+  }
+  .parque .parque__img {
+    width: 100%;
+  }
+
+  .cava {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    gap: 1em;
+  }
+  .cava .cava__img {
+    width: 100%;
+    padding-right: 1em;
+  }
+}
 @media (max-width: 40em) {
   .casco {
     display: block;
+    width: 90%;
+  }
+  .casco .casco__img {
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 0%;
   }
 
   .churrasquera {
     display: block;
+    width: 90%;
+  }
+  .churrasquera .churrasquera__img {
+    width: 100%;
+    padding: 0%;
   }
 
   .parque {
     display: block;
+    width: 90%;
+  }
+  .parque .parque__img {
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 0%;
   }
 
   .cava {
     display: block;
+    width: 90%;
+  }
+  .cava .cava__img {
+    width: 100%;
+    padding: 0%;
   }
 }
 /* ---FIN ESTANCIA.HTML--- */
@@ -385,10 +520,33 @@ a, ul, li {
   background-color: #f1f0f0;
   box-shadow: 2px 2px 5px grey;
 }
+.seccion__servicios ul li {
+  list-style-type: circle;
+}
+.seccion__servicios ul div {
+  display: flex;
+}
 .seccion__servicios ul div img {
+  padding: 0.5em;
   width: 33%;
 }
 
+@media (max-width: 75em) {
+  .seccion__servicios {
+    width: 80%;
+  }
+}
+@media (max-width: 40em) {
+  .seccion__servicios {
+    width: 90%;
+  }
+  .seccion__servicios ul div {
+    display: block;
+  }
+  .seccion__servicios ul div img {
+    width: 90%;
+  }
+}
 /* ---FIN SERVICIOS.HTML--- */
 /* ---HOTEL.HTML--- */
 .seccion-hotel-suite1 {
@@ -419,12 +577,6 @@ a, ul, li {
   margin-right: auto;
   padding: 1em;
   width: 65%;
-}
-
-.carousel-item {
-  width: 65%;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* ---FIN HOTEL.HTML--- */
@@ -467,7 +619,7 @@ a, ul, li {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
-.grid-container .grid-item-1 .grid-item-1:hover {
+.grid-container .grid-item-1:hover {
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
 }
@@ -481,7 +633,7 @@ a, ul, li {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
-.grid-container .grid-item-2 .grid-item-2:hover {
+.grid-container .grid-item-2:hover {
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
 }
@@ -495,7 +647,7 @@ a, ul, li {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
-.grid-container .grid-item-3 .grid-item-3:hover {
+.grid-container .grid-item-3:hover {
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
 }
@@ -509,7 +661,7 @@ a, ul, li {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
-.grid-container .grid-item-4 .grid-item-4:hover {
+.grid-container .grid-item-4:hover {
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
 }
@@ -523,7 +675,7 @@ a, ul, li {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
-.grid-container .grid-item-5 .grid-item-5:hover {
+.grid-container .grid-item-5:hover {
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
 }
@@ -537,7 +689,7 @@ a, ul, li {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
-.grid-container .grid-item-6 .grid-item-6:hover {
+.grid-container .grid-item-6:hover {
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
 }
@@ -548,6 +700,33 @@ a, ul, li {
   object-fit: cover;
 }
 
+@media (max-width: 75em) {
+  .galeria {
+    width: 80%;
+  }
+
+  .galeria-box {
+    min-width: 60%;
+  }
+
+  .grid-container {
+    width: 80%;
+  }
+}
+@media (max-width: 40em) {
+  .galeria {
+    width: 90%;
+  }
+
+  .galeria-box {
+    min-width: 80%;
+  }
+
+  .grid-container {
+    width: 90%;
+    grid-gap: 0.325em;
+  }
+}
 /* ---FIN GALERIA.HTML--- */
 
 /*# sourceMappingURL=style.css.map */

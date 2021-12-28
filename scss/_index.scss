@@ -5,11 +5,21 @@
 .landing { 
     margin-top: 4em;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imagenes/index/index-portada.jpg");
-    height: 100%;
-    background-position: center; 
-    background-repeat: no-repeat; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
-    position: relative;
+}
+
+div {
+    h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        padding: 300px 10px ;
+    }
 }
 
 /* NOSOTROS */
@@ -38,6 +48,7 @@
     
     .nosotros-seccion1-img{
         max-width: 30em;
+        height: auto;
     }
     
 }
@@ -126,51 +137,101 @@
     }
 }
 
+@media (max-width: 80em) {
+
+    .nosotros-seccion1-contenedor {
+
+
+        margin: 1em;
+
+        width: 90%;
+
+        
+    }
+
+    .nosotros-seccion2-contenedor {
+
+        .nosotros-seccion2-box1 {
+            width: 25%;
+            margin: 0.5em;
+        }
+        .nosotros-seccion2-box2 {
+            width: 25%;
+            margin: 0.5em;
+        }
+        .nosotros-seccion2-box3 {
+            width: 25%;
+            margin: 0.5em;
+        }
+    }
+
+    
+}
+
+@media (max-width: 60em) {
+    .nosotros-seccion1-contenedor {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        margin: 1em;
+
+        width: 90%;
+
+        .nosotros-seccion1-box {
+            margin-right: 0em;
+        }
+
+        .nosotros-seccion1-img {
+            width: 100%;
+            margin-top: 1em;
+        }
+    }
+}
+
 @media (max-width: 40em) {
     .nosotros-seccion1-contenedor {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
         margin: 1em;
+
+        width: 90%;
+
+        .nosotros-seccion1-box {
+            margin-right: 0em;
+        }
+
+        .nosotros-seccion1-img {
+            width: 100%;
+            margin-top: 1em;
+        }
     }
 
-    .nosotros-seccion1-img {
-        width: 100%;
-        margin-top: 1em;
-    }
-}
-
-@media (max-width: 80em) {
-    .nosotros-seccion2-box1 {
-        width: 25%;
-        margin: 1em;
-    }
-    .nosotros-seccion2-box2 {
-        width: 25%;
-        margin: 1em;
-    }
-    .nosotros-seccion2-box3 {
-        width: 25%;
-        margin: 1em;
-    }
-}
-
-@media (max-width: 40em) {
     .nosotros-seccion2-contenedor {
         display: block;
+
+        .nosotros-seccion2-box1 {
+            width: 90%;
+            margin: 1em;
+        }
+
+        .nosotros-seccion2-box2 {
+            width: 90%;
+            margin: 1em;
+        }
+        .nosotros-seccion2-box3 {
+            width: 90%;
+            margin: 1em;
+        }
     }
-    .nosotros-seccion2-box1 {
-        width: 90%;
-        margin: 1em;
-    }
-    .nosotros-seccion2-box2 {
-        width: 90%;
-        margin: 1em;
-    }
-    .nosotros-seccion2-box3 {
-        width: 90%;
-        margin: 1em;
-    }
+     
 }
+
+
 
 /* CONTACTO */
 
@@ -222,17 +283,42 @@
     }
 }
 
+@media (max-width: 75em) {
+    .contacto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .contacto-mapa {
+            width: 80%;
+            margin-top: 1em;
+        }
+
+        .contacto-box{
+            width: 80%;
+            margin-top: 1em;
+        } 
+    }
+}
+
 @media (max-width: 40em) {
     .contacto {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .contacto-mapa {
+            width: 90%;
+            margin-top: 1em;
+        }
+
+        .contacto-box{
+            width: 90%;
+            margin-top: 1em;
+        } 
     }
-    .contacto-mapa {
-        width: 100%;
-    }
-    
-    .contacto-box{
-        width: 100%;
-    }
-   }
+}
 
 /* ---FIN INDEX.HTML--- */

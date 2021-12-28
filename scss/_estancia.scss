@@ -12,13 +12,13 @@
     width: 65%;
 
     display: grid;
-    grid-template-columns: 35% 65%;
+    grid-template-columns: 30% 70%;
 
     .casco__img {
         width: 80%;
-    }
-    
+    }  
 }
+
 
 .churrasquera{
     margin-top: 1.5em;
@@ -32,7 +32,7 @@
     width: 65%;
 
     display: grid;
-    grid-template-columns: 65% 35%;
+    grid-template-columns: 70% 30%;
     gap: 3em;
 
     .churrasquera__img {
@@ -52,7 +52,7 @@
     width: 65%;
 
     display: grid;
-    grid-template-columns: 35% 65%;
+    grid-template-columns: 30% 70%;
 
     .parque__img {
         width: 80%;
@@ -71,26 +71,107 @@
     width: 65%;
 
     display: grid;
-    grid-template-columns: 65% 35%;
+    grid-template-columns: 70% 30%;
     gap: 3em;
 
     .cava__img {
         width: 80%;
     }
-}   
+}
+
+@media (max-width: 75em) {
+    .casco {
+        width: 80%;
+
+        display: grid;
+        grid-template-columns: 35% 65%;
+        gap: 1em;
+
+        .casco__img {
+            width: 100%;
+        }
+    }
+
+    .churrasquera {
+        width: 80%;
+
+        display: grid;
+        grid-template-columns: 65% 35%;
+        gap: 1em;
+
+        .churrasquera__img {
+            width: 100%;
+            padding-right: 1em;
+        }
+    }
+
+    .parque {
+        width: 80%;
+
+        display: grid;
+        grid-template-columns: 35% 65%;
+        gap: 1em;
+
+        .parque__img {
+            width: 100%;
+        }
+    }
+
+    .cava {
+        width: 80%;
+
+        display: grid;
+        grid-template-columns: 65% 35%;
+        gap: 1em;
+
+        .cava__img {
+            width: 100%;
+            padding-right: 1em;
+        }
+    }
+}
 
 @media (max-width: 40em) {
     .casco {
         display: block;
+        width: 90%;
+
+        .casco__img {
+            width: 100%;
+            margin-bottom: 1em;
+            padding: 0%;
+        }
     }
+
     .churrasquera {
         display: block;
+        width: 90%;
+
+        .churrasquera__img {
+            width: 100%;
+            padding: 0%;
+        }
     }
+
     .parque {
         display: block;
+        width: 90%;
+
+        .parque__img {
+            width: 100%;
+            margin-bottom: 1em;
+            padding: 0%;
+        }
     }
+    
     .cava {
         display: block;
+        width: 90%;
+
+        .cava__img {
+            width: 100%;
+            padding: 0%;
+        }
     }
 }
 
